@@ -13,7 +13,7 @@ layout: default
 </div> -->
 
 <div style="float:right; margin:1em">
-![raingage]({{ site.url }}img/raingage.jpg){:height="250px" width="250px"}
+![raingage]({{site.baseurl}}/img/raingage.jpg){:height="250px" width="250px"}
 </div>
 
 Data collection is an essential component of Water Resources modeling. Watershed studies in Columbia, SC often use data collected by state and federal institutions to drive their simulations. Unfortunately, this data lacks sufficient spatial and temporal resolution to accurately simulate hydro-environmental watershed processes. High resolution data, such as NEXRAD precipitation, has been found to be inaccurate due to the convective storms that dominate the region and produce spatially diverse rainfall patterns.  To overcome the lack of sufficient observation data, a network of clustered observation sensors will be deployed.
@@ -22,7 +22,7 @@ Research in underway to determine how a network of portable observation sensors 
 
 ## Model Storage and Visualization on the Cloud
 <div style="float: right; margin: 1em">
-![cloud]({{ site.url }}img/swat_hosting.jpg){:height="274px" width="400px"}
+![cloud]({{site.baseurl}}/img/swat_hosting.jpg){:height="274px" width="400px"}
 <!-- <img src="{{ site.url }}img/swat_hosting.jpg" width=400px height=275px alt="SWAT model hosting and visualization."> -->
 </div>
 
@@ -36,7 +36,7 @@ The goal of this research is to investigate how the Microsoft Azure computing en
 ## Large Scale Watershed Delineation
 
 <div style="float: right; margin: 1em">
-![watershed]({{ site.url }}img/watershed.jpg){:height="255px" width="380px"}	
+![watershed]({{site.baseurl}}/img/watershed.jpg){:height="255px" width="380px"}	
 <!-- <img src="{{ site.url }}img/watershed.jpg" width=380px height=255px alt="Watershed delineation using a hierarchical approach"> -->
 </div>
 
@@ -49,7 +49,7 @@ This area of my research focuses on how pre-processed <a target="_blank" href="h
 ## Service Oriented Modeling
 <a href="/download/castronova_wps_2013.pdf">PDF</a>
 <div style="float: right; margin: 1em">
-![soa]({{ site.url }}img/soa.jpg){:height="275px" width="400px"}
+![soa]({{site.baseurl}}/img/soa.jpg){:height="275px" width="400px"}
 <!-- <img src="{{ site.url }}img/soa.jpg" width=400px height=275px alt="Streamflow results using service oriented models "> -->
 </div>
 
@@ -67,7 +67,7 @@ This work showed how a hydrology model can be hosted as a WPS web service and us
 <a name="hydromodeler"></a>
 <a href="/download/castronova_HIS_2012.pdf">PDF</a>
 <div style="float: right; margin: 1em">
-![HM]({{ site.url }}img/HM.jpg){:height="350px" width="500px"}
+![HM]({{site.baseurl}}/img/HM.jpg){:height="350px" width="500px"}
 <!-- <img src="{{ site.url }}img/HM.jpeg" width=500px height=350px alt="The HydroModeler pluging for HydroDesktop"> -->
 </div>
 
@@ -83,7 +83,7 @@ The findings from this study are published in <a href="/download/castronova_HIS_
 <a href="/download/castronova_OpenMI_2013.pdf">PDF</a>
 
 <div style="float: right; margin: 1em">
-![hms]({{ site.url }}img/smw_hms.jpg){:height="300px" width="300px"}
+![hms]({{site.baseurl}}/img/smw_hms.jpg){:height="300px" width="300px"}
 <!-- <img src="{{ site.url }}img/smw_hms.jpg" width=300px height=300px alt="OpenMI performance gains HEC-HMS"> -->
 </div>
 
@@ -99,7 +99,7 @@ This research consisted of constructing a standard rainfall/runoff watershed sys
 Component software architectures offer an alternative approach for building large, complex hydrologic modeling systems. In contrast to more traditional software paradigms (i.e. procedural or object-oriented approaches), using component-based approaches allows individuals to construct autonomous modeling units that can be linked together through shared boundary conditions during a simulation run. One of the challenges in component-based modeling is designing a simple yet robust means for authoring model components. The Simple Model Wrapper (SMW) is an approach for efficiently creating standards-based, process-level hydrologic modeling components. Using this approach, a hydrologic process is implemented as a modeling component by:</p>
 
 <div style="float: right; margin: 1em">
-![swm]({{ site.url }}img/simple_model_wrapper.jpg){:height="300px" width="500px"}
+![swm]({{site.baseurl}}/img/simple_model_wrapper.jpg){:height="300px" width="500px"}
 <!-- <img src="{{ site.url }}img/simple_model_wrapper.jpg" width=500px height=300px alt="Simple Model Wrapper"> -->
 </div>
 
