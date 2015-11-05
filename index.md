@@ -4,7 +4,6 @@ layout: default
 ---
 
 ## About Me
-test
 
 My research is focused in the subfield of Water Resources engineering known as hydroinformatics. In general, my work emphasizes the synergy between hydrologic data and modeling applications, with a particular focus on integrated modeling solutions. One particular focus of my research is the management, supply, and sharing of data among models. My current work uses modern software technologies and community standards to solve hydrologic modeling problems with a specific interest in establishing mechanisms for data interoperability between independent software systems. It emphasizes model integration using a combination of data communication standards and web service standards. 
 
