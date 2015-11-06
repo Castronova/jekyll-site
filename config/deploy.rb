@@ -31,7 +31,6 @@ before :restart, :build_public do
      within "#{deploy_to}/current" do
         #release_path do
         #execute 'jekyll',  "build --destination public"
-        execute 'jekyll', "clean"
         execute 'jekyll',  "build"
       end
    end
