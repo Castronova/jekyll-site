@@ -38,6 +38,7 @@
     </div>
     <div>
       <ul class="nav navbar-nav">
+        
         <!-- "current" is used to determine if the current tab is active or not  -->
         <li {% if current[1] == null %}class="active"{% endif %}><a href="/">Home</a></li>
         <li {% if current[1] == 'research' %}class="active"{% endif %}><a href="/research">Research</a></li>
@@ -45,8 +46,8 @@
         <li {% if current[1] == 'presentations' %}class="active"{% endif %}><a href="/presentations">Presentations</a></li>
         <li {% if current[1] == 'teaching' %}class="active"{% endif %}><a href="/teaching">Teaching</a></li>
         <li {% if current[1] == 'researchgroup' %}class="active"{% endif %}><a href="/researchgroup">Research Group</a></li>
-        <li {% if current[1] == 'cv' %}class="active"{% endif %}><a href="/cv">CV</a></li>
         <li {% if current[1] == 'blog' %}class="active"{% endif %}><a href="/blog">Blog</a></li>
+
       </ul>
     </div>
   </div>
