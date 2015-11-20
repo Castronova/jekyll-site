@@ -3,7 +3,7 @@ title: Home
 layout: default
 ---
 
-## About Me
+## About
 
 My research is focused in the subfield of Water Resources engineering known as hydroinformatics. In general, my work emphasizes the synergy between hydrologic data and modeling applications, with a particular focus on integrated modeling solutions. One particular focus of my research is the management, supply, and sharing of data among models. My current work uses modern software technologies and community standards to solve hydrologic modeling problems with a specific interest in establishing mechanisms for data interoperability between independent software systems. It emphasizes model integration using a combination of data communication standards and web service standards. 
 
@@ -18,16 +18,15 @@ My research is focused in the subfield of Water Resources engineering known as h
 <b>Ph.D., Civil Engineering and Environmental Engineering, May 2012</b> <br>
 University of South Carolina<br>
 Columbia, SC<br>
-<a href="download/castronova_dissertation.pdf" target="_blank">Simulating Water Resource Systems as a Set of Loosely Integrated Model Components</a>
 
 <br>
 
 <b>M.S., Civil Engineering, May 2011 </b><br>
-<a href="download/castronova_thesis.pdf" target="_blank"> A Generic Approach to Loosely Integrated Hydrologic Modeling</a><br>
 University of South Carolina<br>
 Columbia, SC<br>
 
 <br>
+
 <b>B.S., Civil Engineering, May 2007</b><br>
 Clarkson University<br>
 Potsdam, NY<br>
