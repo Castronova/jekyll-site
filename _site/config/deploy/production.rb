@@ -7,7 +7,7 @@ set :stage, :production
 # used to set extended properties on the server.
 
 ask(:password, nil, echo:false)
-server '129.123.51.178', user: 'castro', port: 22, roles: %w{web app}
+server '129.123.9.4', user: 'castro', port: 22, roles: %w{web app}
 
 set :bundle_binstubs, nil
 
