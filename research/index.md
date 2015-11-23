@@ -47,7 +47,6 @@ This area of my research focuses on how pre-processed <a target="_blank" href="h
 <br>
 
 ## Service Oriented Modeling
-<a href="/download/castronova_wps_2013.pdf">PDF</a>
 <div style="float: right; margin: 1em">
 ![soa]({{site.baseurl}}/img/soa.jpg){:height="275px" width="400px"}
 <!-- <img src="{{ site.url }}img/soa.jpg" width=400px height=275px alt="Streamflow results using service oriented models "> -->
@@ -58,14 +57,13 @@ Environmental modeling often requires the use of multiple data sources, models, 
 This work advanced the idea of service-oriented modeling by presenting a design for a modeling service that builds from the <a target="_blank" href="http://www.opengeospatial.org/standards/wps">Open Geospatial Consortium (OGC) Web Processing Service (WPS)</a> protocol. This work demonstrated how the WPS protocol could be used to create modeling services, and then demonstrated how these modeling services can be brought into workflow environments using generic client-side code. This work was implemented within the <a href="#hydromodeler">HydroModeler</a> environment, a model coupling tool built on the Open Modeling Interface standard (version 1.4).
 
 
-This work showed how a hydrology model can be hosted as a WPS web service and used within a client-side workflow. The primary advantage of this approach is that the server-side software follows an established standard that can be leveraged and reused within multiple workflow environments and decision support systems.  The findings of this study are published in <a href="/download/castronova_wps_2013.pdf">Castronova, et al. 2013.</a>
+This work showed how a hydrology model can be hosted as a WPS web service and used within a client-side workflow. The primary advantage of this approach is that the server-side software follows an established standard that can be leveraged and reused within multiple workflow environments and decision support systems.  The findings of this study are published in **Castronova, et al. 2013**.
 
 <br>
 
 
 ## HydroModeler
 <a name="hydromodeler"></a>
-<a href="/download/castronova_HIS_2012.pdf">PDF</a>
 <div style="float: right; margin: 1em">
 ![HM]({{site.baseurl}}/img/HM.jpg){:height="350px" width="500px"}
 <!-- <img src="{{ site.url }}img/HM.jpeg" width=500px height=350px alt="The HydroModeler pluging for HydroDesktop"> -->
@@ -75,12 +73,11 @@ HydroModeler is a HydroDesktop plugin that extends its capabilities to include c
 
 The goal of this work provide interoperability between the Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI) Hydrologic Information System (<a target="_blank" href="http://his.cuahsi.org">HIS</a>) and the Open Modeling Interface (OpenMI). The primary motivation for making these two systems interoperable is that the CUAHSI HIS has a primary focus on hydrologic data management and visualization while the OpenMI has a primary focus on integrated environmental modeling. By combining the two systems into a single software application, it is possible to create an integrated environmental modeling environment that scientists and engineers can use to understand and manage environmental systems. 
 
-The findings from this study are published in <a href="/download/castronova_HIS_2012.pdf">Castronova et al., 2013</a>.  This paper describes the design and implementation of this prototype software system, and presents an example application in which evapotranspiration is modeled using OpenMI components that consume HIS time series data for input. 
+The findings from this study are published in **Castronova et al., 2013**.  This paper describes the design and implementation of this prototype software system, and presents an example application in which evapotranspiration is modeled using OpenMI components that consume HIS time series data for input. 
 
 <br>
 
 ## Performance of Loosely Integrated Modeling
-<a href="/download/castronova_OpenMI_2013.pdf">PDF</a>
 
 <div style="float: right; margin: 1em">
 ![hms]({{site.baseurl}}/img/smw_hms.jpg){:height="300px" width="300px"}
@@ -89,14 +86,13 @@ The findings from this study are published in <a href="/download/castronova_HIS_
 
 Due to the complex nature of watershed systems, it is often necessary to integrate multiple simulation models to predict holistic system response. This research explores the use of a component-based approach for the runtime integration of models, implemented as "plug-and-play" software components. Our motivation was to quantify performance overhead costs introduced by adopting a component-based paradigm for loosely integrating hydrologic simulation models. 
 
-This research consisted of constructing a standard rainfall/runoff watershed system using the Open Modeling Interface (OpenMI) in which infiltration, surface runoff, and channel routing processes are each implemented as independent model components. The performance of this model was analyzed to quantify the computational scaling of the loose integration approach, against the Hydrologic Engineering Center's Hydrologic Modeling System (<a target="_blank" href="http://www.hec.usace.army.mil/software/hec-hms/">HMS</a>). The findings of this study are published in <a href="/download/castronova_OpenMI_2013">Castronova and Goodall, 2013</a>. The results suggest that the overhead introduced by runtime communication of data is not significant when applied for semi-distributed watershed modeling. 
+This research consisted of constructing a standard rainfall/runoff watershed system using the Open Modeling Interface (OpenMI) in which infiltration, surface runoff, and channel routing processes are each implemented as independent model components. The performance of this model was analyzed to quantify the computational scaling of the loose integration approach, against the Hydrologic Engineering Center's Hydrologic Modeling System (<a target="_blank" href="http://www.hec.usace.army.mil/software/hec-hms/">HMS</a>). The findings of this study are published in **Castronova and Goodall, 2013**. The results suggest that the overhead introduced by runtime communication of data is not significant when applied for semi-distributed watershed modeling. 
 
 <br>
 
 ## The Simple Model Wrapper
-<a href="/download/castronova_SMW_2010.pdf">PDF</a>
 
-Component software architectures offer an alternative approach for building large, complex hydrologic modeling systems. In contrast to more traditional software paradigms (i.e. procedural or object-oriented approaches), using component-based approaches allows individuals to construct autonomous modeling units that can be linked together through shared boundary conditions during a simulation run. One of the challenges in component-based modeling is designing a simple yet robust means for authoring model components. The Simple Model Wrapper (SMW) is an approach for efficiently creating standards-based, process-level hydrologic modeling components. Using this approach, a hydrologic process is implemented as a modeling component by:</p>
+Component software architectures offer an alternative approach for building large, complex hydrologic modeling systems. In contrast to more traditional software paradigms (i.e. procedural or object-oriented approaches), using component-based approaches allows individuals to construct autonomous modeling units that can be linked together through shared boundary conditions during a simulation run. One of the challenges in component-based modeling is designing a simple yet robust means for authoring model components. The Simple Model Wrapper (SMW) is an approach for efficiently creating standards-based, process-level hydrologic modeling components. Using this approach, a hydrologic process is implemented as a modeling component by:
 
 <div style="float: right; margin: 1em">
 ![swm]({{site.baseurl}}/img/simple_model_wrapper.jpg){:height="300px" width="500px"}
@@ -108,6 +104,6 @@ Component software architectures offer an alternative approach for building larg
 * Creating a class with three methods that define the pre-run, runtime, and post-run behavior of the modeling component.
 
 
-This work was presented and demonstrated in Castronova and Goodall, 2010. Further information and source code for this project can be found <a href="https://code.google.com/p/smw/">here</a>.
+This work was presented in **Castronova and Goodall, 2010**, further information and source code for this project can be found <a href="https://code.google.com/p/smw/">here</a>.
 
 
