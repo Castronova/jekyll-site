@@ -15,19 +15,15 @@ My research is focused in the subfield of Water Resources engineering known as h
 ## Education
 
 <br>
-<b>Ph.D., Civil Engineering and Environmental Engineering, May 2012</b> <br>
+<b>Ph.D., Civil Engineering and Environmental Engineering, 2012</b> <br>
 University of South Carolina<br>
 Columbia, SC<br>
 
-<br>
-
-<b>M.S., Civil Engineering, May 2011 </b><br>
+<b>M.S., Civil Engineering, 2011 </b><br>
 University of South Carolina<br>
 Columbia, SC<br>
 
-<br>
-
-<b>B.S., Civil Engineering, May 2007</b><br>
+<b>B.S., Civil Engineering, 2007</b><br>
 Clarkson University<br>
 Potsdam, NY<br>
 
