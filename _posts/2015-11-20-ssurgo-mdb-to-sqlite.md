@@ -17,7 +17,12 @@ The following bash script loops over the all *.mdb files in the current director
 
 To use this following script, place all SSURGO *.mdb files in a single directory along with the script below (make sure the script has execute privileges).  Execute the script using the following command:
 
-`convert2sqlite.sh my-empty-sqlite-file.sqlite`
+
+
+    ./convert2sqlite.sh my-empty-sqlite-file.sqlite
+
+
+`convert2sqlite.sh` :
 
     #!/usr/bin/env bash
 
