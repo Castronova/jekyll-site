@@ -78,9 +78,30 @@
   </p>
   <div class="content">
     
-<h1 id="usrbinenv-bash">!/usr/bin/env bash</h1>
+<p>In my previous post I demonstrated how the SSURGO soil dataset can be converted from a Microsoft Access (*.mdb) file into a platform indepedent SQLite format. This post extends the previous example to build a SQLite soil database from a directory of SSURGO *.mdb files.</p>
 
-<pre><code>COUNTER=1
+<p>The following bash script loops over the all *.mdb files in the current directory and performs the following:</p>
+
+<ol>
+  <li>
+    <p>Use the database schema of the first *.mdb file to build the SQLite database tables.</p>
+  </li>
+  <li>
+    <p>For each *.mdb file, dump their data into a single SQLite database.</p>
+  </li>
+  <li>
+    <p>Send any error messages to a stderr.log file</p>
+  </li>
+</ol>
+
+<p>To use this following script, place all SSURGO *.mdb files in a single directory along with the script below (make sure the script has execute privileges).  Execute the script using the following command:</p>
+
+<p><code>convert2sqlite.sh my-empty-sqlite-file.sqlite</code></p>
+
+<pre><code>#!/usr/bin/env bash
+
+
+COUNTER=1
 
 for f in *.mdb; do
     echo "Processing file $f..."
