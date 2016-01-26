@@ -1,8 +1,0 @@
-GIT_REPO=https://github.com/Castronova/jekyll-site.git
-TMP_GIT_CLONE=$HOME/tmp/jekyll-site
-PUBLIC_WWW=$HOME/jekyll-site/_site
-
-git clone $GIT_REPO $TMP_GIT_CLONE
-jekyll build -s $TMP_GIT_CLONE -d $PUBLIC_WWW
-rm -Rf $TMP_GIT_CLONE
-exit

@@ -55,7 +55,7 @@ The result of these steps should be perfectly aligned rasters.
 
 While the solution above works well, this process can be further automated using Python and the `osgeo` library.  The following code was built and executed within an anaconda environment on OSX.  [download][1]
 
-[1]:[{{ site.url }}/files/align.py]
+[1]:{{ site.url }}/files/align.py
 
 
     import os, sys
