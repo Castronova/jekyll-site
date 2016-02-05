@@ -10,5 +10,3 @@ paginate_path: "/blog/page:num"
 
 
 gems: [jekyll-sitemap]
-# gems: [jekyll-sitemap]
-  # - jekyll-last-modified-at
