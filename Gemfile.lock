@@ -26,6 +26,7 @@ DEPENDENCIES
   capistrano
   jekyll-paginate
   kramdown
+  rake
   rvm1-capistrano3
 
 BUNDLED WITH

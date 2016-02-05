@@ -1,11 +1,9 @@
 source 'https://rubygems.org'
-#gem "capistrano-rails"
-#gem 'rspec'
-#gem 'faker'
-gem 'rake'
-#gem 'activerecord'
-#gem 'pg'
-gem 'capistrano'
-gem 'rvm1-capistrano3'
+
+ruby '2.2.4'
+gem jekyll
+gem 'capistrano-rvm'
+gem 'capistrano-bundler'
 gem 'jekyll-paginate'
 gem 'kramdown'
+gem 'rvm1-capistrano3', require: false

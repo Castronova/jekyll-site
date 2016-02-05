@@ -4,8 +4,6 @@
 set :application, 'jekyll-site'
 set :repo_url, "git@github.com:Castronova/jekyll-site.git"
 
-set :rvm_ruby_version, :local
-
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, "/home/castro/Documents/#{fetch(:application)}"
 
@@ -30,10 +28,13 @@ end
  
 before :restart, :build_public do
    on roles(:app) do
-     within "#{deploy_to}/current" do
+       within release_path do
+           execute 'jekyll',  "build --destination public"
+
+#     within "#{deploy_to}/current" do
         #release_path do
         #execute 'jekyll',  "build --destination public"
-        execute 'jekyll',  "build"
+ #       execute 'jekyll',  "build"
       end
    end
 end
