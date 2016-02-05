@@ -5,12 +5,6 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (~> 1.3)
-    capistrano-bundler (1.1.4)
-      capistrano (~> 3.1)
-      sshkit (~> 1.2)
-    capistrano-rails (1.1.6)
-      capistrano (~> 3.1)
-      capistrano-bundler (~> 1.1)
     i18n (0.7.0)
     jekyll-paginate (1.1.0)
     kramdown (1.9.0)
@@ -29,7 +23,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capistrano-rails
+  capistrano
   jekyll-paginate
   kramdown
   rvm1-capistrano3
