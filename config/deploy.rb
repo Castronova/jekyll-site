@@ -29,7 +29,7 @@ end
 before :restart, :build_public do
    on roles(:app) do
        within release_path do
-           execute '/home/castro/.rvm/gems/ruby-2.2.4/bin/jekyll',  "build --destination public"
+           execute '/home/castro/.rvm/gems/ruby-2.2.4/wrappers/jekyll',  "build --destination public"
 
 #     within "#{deploy_to}/current" do
         #release_path do
