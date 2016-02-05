@@ -29,7 +29,7 @@ end
 before :restart, :build_public do
    on roles(:app) do
        within release_path do
-           execute 'jekyll',  "build --destination public"
+           execute '$(which jekyll)',  "build --destination public"
 
 #     within "#{deploy_to}/current" do
         #release_path do
