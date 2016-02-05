@@ -24,6 +24,7 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano-rails
+  rake
 
 BUNDLED WITH
    1.11.2
