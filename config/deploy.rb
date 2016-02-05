@@ -4,7 +4,7 @@
 set :application, 'jekyll-site'
 set :repo_url, "git@github.com:Castronova/jekyll-site.git"
 
-set :rvm_ruby_version, '2.1.3'
+set :rvm_ruby_version, :local
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, "/home/castro/Documents/#{fetch(:application)}"
