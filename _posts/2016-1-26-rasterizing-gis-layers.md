@@ -6,6 +6,9 @@ layout: post
 
 ArcMap has a tool for converting vector layers to raster datasets `FeatureToRaster` that generally works pretty well.  Unfortunately, if you need your rasterized layer to align with existing rasters, i.e. same cellsize and same extent, this tool becomes a headache. ArcMap provides a tool for aligning rasters, but it doesn't work!  There are a bunch of posts regarding this topic: [example 1](http://gis.stackexchange.com/questions/34085/how-can-i-align-two-non-coincident-equi-resolution-raster-grids), [example 2](https://geonet.esri.com/thread/98483), [example 3](http://gis.stackexchange.com/questions/43437/how-to-align-two-rasters-of-exact-same-cell-size-extent-in-arcgis-desktop).  After wasting too much time searching for a "working" solution in ArcMap, I decided to use gdal instead.
 
+<!--break-->
+
+
 **Problem**
 
 How can I convert a vector layer into a raster and exactly align the cells with an existing raster?  If we try to do this using a naive approach (using ArcMap) by (1) converting the vector layer to a raster and (2) clipping it to the extent of our existing raster layer, we end up with something like this:

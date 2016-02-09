@@ -8,6 +8,8 @@ The SSURGO database contains detailed soil information for the contiguous US.  T
 
 First we need to download the data and build the SSURGO Access database which means first navigating to the [GeoSpatial Data Gateway](https://gdg.sc.egov.usda.gov/GDGOrder.aspx) to download some data.  Navigate through the prompts to select a state, county, and data set (Soils -> Soil Survey Spatial and Tabular Data).  Once this data is downloaded and unzipped you will see a folder hierarchy like this.
 
+<!--break-->
+
 ![ssurgo folder structure]({{site.baseurl}}/img/ssurgo_unzipped.png) 
 
 Next, we need to start up our Windows virtual machine and open the *.mdb file with Microsoft Access.  You will be prompted to provide the path the the SSURGO tabular data, and a macro will take over to construct and populate the database.  This is normally where we would add these data into ArcMap and start joining to other datasets, but we want to work outside of Windows today. Copy this *mdb file back onto your local machine (I'm using OSX, El Capitan).

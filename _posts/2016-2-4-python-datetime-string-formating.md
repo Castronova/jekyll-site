@@ -14,6 +14,9 @@ I have run into an issue recently when attempting to convert Python datetime obj
             conv.append(dt.strftime('%Y-%m-%d %H:%M:%S.%f'))
         return conv
 
+<!--break-->
+
+
 For a list of 100000 elements, this function takes 1.75 seconds (average of 5 runs).  This will become prohibitively slow as the size of the input data increases.  The following function offers a slight speedup:
 
     def strftime_comprehension(dt_list):

@@ -6,6 +6,9 @@ layout: post
 
 I've recently come across an annoying ArcMap issue when working with a student to join some data (stored as *.txt) to a vector shapefile.  When the data is loaded, ArcMap parses the values and tries to assign correct data types to each of the columns.  This is usually not an issue, except when encoding numeric ids as strings.  For instance, numbers with leading zeros such as`01234` are truncated to `1234` when converted into a numeric datatype. This causes much pain and suffering...fortuntaly there is a simple fix.
 
+
+<!--break-->
+
 1. Create a text file with your data in it (e.g. `data.txt`)
 
     

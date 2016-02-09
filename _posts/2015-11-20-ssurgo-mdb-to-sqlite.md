@@ -9,6 +9,8 @@ In my previous post I demonstrated how the SSURGO soil dataset can be converted 
 
 The following bash script loops over the all *.mdb files in the current directory and performs the following:
 
+<!--break-->
+
 1. Use the database schema of the first *.mdb file to build the SQLite database tables.
 
 2. For each *.mdb file, dump their data into a single SQLite database.
