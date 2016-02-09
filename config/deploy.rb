@@ -23,7 +23,8 @@ namespace :deploy do
     on roles(:app), in: :sequence, wait: 5 do
 
         # create file in student_updates
-        execute :touch, release_path.join('student_updates/test.txt')
+        execute :mkdir, release_path.join('student_updates/updates')
+        execute :cp, 'home/testuser/weekly_updates/updates.md', release_path.join('student_updates/updates/testuser.md')
         
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
