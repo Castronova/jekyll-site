@@ -16,9 +16,6 @@ set :log_level, :debug
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
-# create file in student_updates
-execute :mkdir, release_path.join('student_updates/updates')
-execute :cp, '/home/testuser/weekly_updates/updates.md', release_path.join('student_updates/updates/testuser.md')
 
 
 namespace :deploy do
@@ -36,6 +33,9 @@ end
 before :restart, :build_public do
    on roles(:app) do
        within release_path do
+           # create file in student_updates
+           execute :mkdir, release_path.join('student_updates/updates')
+           execute :cp, '/home/testuser/weekly_updates/updates.md', release_path.join('student_updates/updates/testuser.md')
            execute '/home/castro/.rvm/gems/ruby-2.2.4/wrappers/jekyll',  "build"
 
 #     within "#{deploy_to}/current" do
