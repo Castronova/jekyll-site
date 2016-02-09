@@ -21,6 +21,10 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
+
+        # create file in student_updates
+        execute :touch, release_path.join('student_updates/test.txt')
+        
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
   end
