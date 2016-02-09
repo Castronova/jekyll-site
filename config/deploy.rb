@@ -24,7 +24,7 @@ namespace :deploy do
 
         # create file in student_updates
         execute :mkdir, release_path.join('student_updates/updates')
-        execute :cp, 'home/testuser/weekly_updates/updates.md', release_path.join('student_updates/updates/testuser.md')
+        execute :cp, '/home/testuser/weekly_updates/updates.md', release_path.join('student_updates/updates/testuser.md')
         
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
