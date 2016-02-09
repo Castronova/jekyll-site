@@ -6,6 +6,8 @@ from os.path import *
 from osgeo import ogr, gdal
 from multiprocessing import Process
 
+
+# set the GDA:_DATA environment variable assuming that it is relative to the anaconda executable 
 os.environ['GDAL_DATA'] = abspath(join(sys.executable, '../../share/gdal'))
 
 
@@ -20,14 +22,14 @@ def new_raster_from_base(base, output, format, nodata, datatype):
     :param datatype: value datatype 
     :return: empty raster object
     """
-   
+
     projection = base.GetProjection()
     geotransform = base.GetGeoTransform()
     bands = base.RasterCount
 
     driver = gdal.GetDriverByName(format)
-
-    new_raster = driver.Create(str(output), cols, rows, bands, datatype)
+    r,c = base.GetRasterBand(1).ReadAsArray().shape
+    new_raster = driver.Create(str(output), c, r, bands, datatype)
     new_raster.SetProjection(projection)
     new_raster.SetGeoTransform(geotransform)
 
@@ -36,7 +38,6 @@ def new_raster_from_base(base, output, format, nodata, datatype):
         new_raster.GetRasterBand(i + 1).Fill(nodata)
 
     return new_raster
-
 
 def rasterize_and_align(input_layer, input_raster, output_raster):
     """
