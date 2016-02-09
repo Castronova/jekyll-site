@@ -4,7 +4,7 @@ layout: post
 ---
 {::options parse_block_html="true" /}
 
-ArcMap has a tool for converting vector layers to raster datasets `FeatureToRaster` that generally works pretty well.  Unfortunately, if you need your rasterized layer to align with existing rasters, i.e. same cellsize and same extent, this tool becomes a headache. ArcMap provides a tool for aligning rasters, but it doesn't work!  There are a bunch of posts regarding this topic: [ex1](http://gis.stackexchange.com/questions/34085/how-can-i-align-two-non-coincident-equi-resolution-raster-grids), [ex2](https://geonet.esri.com/thread/98483), [ex3](http://gis.stackexchange.com/questions/43437/how-to-align-two-rasters-of-exact-same-cell-size-extent-in-arcgis-desktop).  After wasting too much time searching for a working solution in ArcMap, I decided to use gdal instead.
+ArcMap has a tool for converting vector layers to raster datasets `FeatureToRaster` that generally works pretty well.  Unfortunately, if you need your rasterized layer to align with existing rasters, i.e. same cellsize and same extent, this tool becomes a headache. ArcMap provides a tool for aligning rasters, but it doesn't work!  There are a bunch of posts regarding this topic: [example 1](http://gis.stackexchange.com/questions/34085/how-can-i-align-two-non-coincident-equi-resolution-raster-grids), [example 2](https://geonet.esri.com/thread/98483), [example 3](http://gis.stackexchange.com/questions/43437/how-to-align-two-rasters-of-exact-same-cell-size-extent-in-arcgis-desktop).  After wasting too much time searching for a "working" solution in ArcMap, I decided to use gdal instead.
 
 **Problem**
 
@@ -57,6 +57,12 @@ While the solution above works well, this process can be further automated using
 
 [1]:{{ site.url }}/files/align.py
 
+Execute this script with the following command:
+
+    $python align.py -i my_shape_file.shp -r my_raster_dataset -o my_output_raster
+
+Where `my_shape_file` is the shapefile that will be rasterized and aligned, `my_raster_dataset` is the raster that will be used to align the shapefile, and `my_output_raster` is the path to save the aligned output.  Below is the complete code listing:
+
 
     import os, sys
     import time
@@ -65,19 +71,19 @@ While the solution above works well, this process can be further automated using
     from osgeo import ogr, gdal
     from multiprocessing import Process
 
-    # set the GDA:_DATA environment variable assuming that it is relative to the anaconda executable
-    os.environ['GDAL_DATA'] = abspath(join(sys.executable, '../../share/gdal'))
 
+    # set the GDA:_DATA environment variable assuming that it is relative to the anaconda executable 
+    os.environ['GDAL_DATA'] = abspath(join(sys.executable, '../../share/gdal'))
 
     def new_raster_from_base(base, output, format, nodata, datatype):
         """
-        creates and empty raster object using a base raster as a template
+        creates and empty raster object using a base raster as a template 
         http://gis.stackexchange.com/questions/31568/gdal-rasterizelayer-doesnt-burn-all-polygons-to-raster
-        :param base: base raster layer to use as a template
-        :param output: output raster object
+        :param base: base raster layer to use as a template 
+        :param output: output raster object 
         :param format: format of the raster object
-        :param nodata: nodata value
-        :param datatype: value datatype
+        :param nodata: nodata value 
+        :param datatype: value datatype 
         :return: empty raster object
         """
 
@@ -86,8 +92,8 @@ While the solution above works well, this process can be further automated using
         bands = base.RasterCount
 
         driver = gdal.GetDriverByName(format)
-
-        new_raster = driver.Create(str(output), cols, rows, bands, datatype)
+        r,c = base.GetRasterBand(1).ReadAsArray().shape
+        new_raster = driver.Create(str(output), c, r, bands, datatype)
         new_raster.SetProjection(projection)
         new_raster.SetGeoTransform(geotransform)
 
@@ -96,7 +102,6 @@ While the solution above works well, this process can be further automated using
             new_raster.GetRasterBand(i + 1).Fill(nodata)
 
         return new_raster
-
 
     def rasterize_and_align(input_layer, input_raster, output_raster):
         """
